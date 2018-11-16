@@ -15,8 +15,8 @@ recipeIngredients_ID
 
     tbl.real('quantity')
    
-    tbl.string('quantity_unit', 50)
-       .unique('quantity_unit');
+    tbl.string('quantity_type', 50)
+       .unique('quantity_type');
     
     //foreign id
     tbl

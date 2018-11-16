@@ -29,10 +29,10 @@ return knex.schema.createTable('steps', function(tbl) {
      });
    }
 
-     exports.down = function(knex, Promise) {
-      // undo the changes to the database (it's called rolling back changes)
-      return knex.schema.dropTableIfExists('steps');
-    };
+exports.down = function(knex, Promise) {
+// undo the changes to the database (it's called rolling back changes)
+   return knex.schema.dropTableIfExists('steps');
+};
     
     
   
