@@ -15,7 +15,7 @@ return knex.schema.createTable('steps', function(tbl) {
        .unique('step');
 
     tbl.integer('sequence_number')
-       .unique('sequence_number');
+      
     
     //foreign id
     tbl

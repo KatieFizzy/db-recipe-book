@@ -18,8 +18,7 @@ return knex.schema.createTable('recipeIngredients', function(tbl) {
    tbl.real('quantity')
      
    tbl.string('quantity_unit', 50)
-      .unique('quantity_unit');
-
+     
    //foreign ids
    tbl
    .integer('recipe_id')

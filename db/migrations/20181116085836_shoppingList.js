@@ -11,12 +11,7 @@ recipeIngredients_ID
     tbl.increments(); 
     
     // other fields
-    tbl.string('ingredient_type', 255)
 
-    tbl.real('quantity')
-   
-    tbl.string('quantity_type', 50)
-       .unique('quantity_type');
     
     //foreign id
     tbl
