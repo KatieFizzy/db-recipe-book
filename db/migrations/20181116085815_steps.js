@@ -1,10 +1,8 @@
 
 exports.up = function(knex, Promise) {
 /* STEPS create table function - holds list of all steps, 
-with a column to tie steps to a specific recipeIngredientsID, and a column
-for a optional step sequence number to be added. Ties recipeIngredientsID
-vs recipe ID so it has ability to refer to ingredients and quantity
-if needed in some frontend scenario*/
+with a column to tie steps to a specific recipe_ID, and a column
+for a optional step sequence number to be added. */
     
 return knex.schema.createTable('steps', function(tbl) {
     // make changes to the table using the tbl object passed as a parameter
@@ -16,15 +14,15 @@ return knex.schema.createTable('steps', function(tbl) {
     tbl.string('step', 355)
        .unique('step');
 
-    tbl.integer('sequence number')
-       .unique('sequence number');
+    tbl.integer('sequence_number')
+       .unique('sequence_number');
     
     //foreign id
     tbl
-    .integer('recipeIngredient_id')
+    .integer('recipe_id')
     .unsigned()
     .references('id')
-    .inTable('recipeIngredients');
+    .inTable('recipes');
     
      });
    }
